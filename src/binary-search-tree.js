@@ -17,10 +17,7 @@ class BinarySearchTree {
   }
 
   add(data) {
-    if (this.root && data) {
-      this.root = addData(this.root, data);
-
-      function addData(node, value) {
+    function addData(node, value) {
         if (!node) {
           return value;
         }
@@ -36,6 +33,10 @@ class BinarySearchTree {
         }
         return node;
       }
+    if (this.root && data) {
+      this.root = addData(this.root, data); 
+    } else {
+      return false;
     }
   }
 
